@@ -14,23 +14,23 @@
   <div class="form-group">
     <%= form.text_field :image, placeholder: "Изображение", class: 'form-control' %>
   </div>
-
+  <br>
   <div class="form-group">
     <%= form.text_field :video, placeholder: "Видео", class: 'form-control' %>
   </div>
-
+  <br>
   <div class="form-group">
     <%= form.text_field :title, placeholder: "Название", class: 'form-control' %>
   </div>
-
+  <br>
   <div class="form-group">
     <%= form.number_field :star, placeholder: "Рейтинг", class: 'form-control' %>
   </div>
-
+  <br>
   <div class="field">
     <%= form.text_area :description, placeholder: "Описание", length: "800", :class => 'form-control' %>
   </div>
-
+  <br>
   <button type="submit" class="btn btn-primary">Сохранить</button>
 
   <%= link_to "Открыть все курсы" , courses_path, class: "btn btn-secondary" %>
