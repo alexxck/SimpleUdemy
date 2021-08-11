@@ -1,29 +1,16 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @course.image %>
-</p>
-
-<p>
-  <strong>Video:</strong>
-  <%= @course.video %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @course.title %>
-</p>
-
-<p>
-  <strong>Star:</strong>
-  <%= @course.star %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @course.description %>
-</p>
-
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>
+<div class="card mb-3" >
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <%= image_tag @course.image, class: "card-img" %>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= @course.title %></h5>
+        <% (1..@course.star).each do %>
+          <i class="far fa-star"></i>
+        <% end %>
+        <p class="card-text"><%= @course.description %></p>
+      </div>
+    </div>
+  </div>
+</div>
