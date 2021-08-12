@@ -4,11 +4,11 @@
     <div class="col-md-4">
       <div class="card">
       <%= link_to course do %>
-        <%= image_tag course.image, class: "card-img-top" %>
+        <%= image_tag course.cover, class: "card-img-top" %>
       <% end %>
       <div class="card-body">
         <h5 class="card-title"><%= course.title %></h5>
-        <% (1..course.star).each do %>
+        <% (1..course.star_number).each do %>
           <i class="far fa-star"></i>
         <% end %>
         <p class="card-text"><%= course.description %></p>

@@ -46,12 +46,12 @@
 <div class="card mb-3" >
   <div class="row no-gutters">
     <div class="col-md-4">
-      <%= image_tag @course.image, class: "card-img" %>
+      <%= image_tag @course.cover, class: "card-img" %>
     </div>
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title"><%= @course.title %></h5>
-        <% (1..@course.star).each do %>
+        <% (1..@course.star_number).each do %>
           <i class="far fa-star"></i>
         <% end %>
         <p class="card-text"><%= @course.description %></p>
