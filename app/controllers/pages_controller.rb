@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   def about; end
 
   def home
-    @courses = Course.all
+    @courses = Course.where(public: true)
   end
 
   def location; end
